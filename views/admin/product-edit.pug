@@ -1,0 +1,32 @@
+extends ../common/layout 
+
+block layout-content
+    .container
+        .row
+            .col-sm-12
+                h2.page-title Edit Product
+        .row
+            .col-sm-12 
+                form(method="post", action="/admin/menu/products/edit/submit")
+                    input(type="hidden", name="productId", value=editProduct._id)
+                    .formgroup
+                        div
+                            label(for="name") Product Name:
+                            input.form-control(type="text", id="name", name="name", value=editProduct.name)
+                        div
+                            label(for="desc") Product Description: 
+                            input.form-control(type="text", id="desc", name="desc", value=editProduct.desc)
+                        div
+                            label(for="price") Price: 
+                            input.form-control(type="number", id="price", name="price", value=editProduct.price)
+                        div
+                            label(for="category") Category: 
+                            input.form-control(type="text", id="category", name="category", value=editProduct.category)
+                        div
+                            label(for="img_src") Product Image URL: 
+                            input.form-control(type="text", id="img_src", name="img_src", value=editProduct.img_src)
+
+                        div
+                            label(for="inv") Inventory: 
+                            input.form-control(type="number", id="inv", name="inv", value=editProduct.inv)
+                    button.btn.btn-info(type="submit", value="edit-product") + Edit Product

@@ -1,0 +1,16 @@
+extends common/layout 
+
+block layout-content
+    div.container
+        .row.pt-5
+            .col-sm-12
+                h2 #{record.title} | #{record.artist} | Original Release:   #{record.released}
+                h3
+                    span.badge.bg-info #{record.genre}
+        .row
+            .col-sm-6.text-center
+                img(src=record.art_src, width="300px", alt="Cover Art for " + record.title)
+            .col-sm-6
+                p.unit-price $ #{record.price}
+                .unit-buttons.text-center 
+                    a.btn.btn-outline-primary Add to Cart

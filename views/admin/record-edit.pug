@@ -1,0 +1,34 @@
+extends ../common/layout 
+
+block layout-content
+    div.container
+        div.row
+            div.col-sm-12
+                h2.page-title Edit Record Details 
+        div.row
+            div.col-sm-12
+                form(method="post", action="/admin/menu/records/edit/submit")
+                    input(type="hidden", name="recordId", value=editRecord._id)
+                    div.form-group
+                        div
+                            label(for="title") Title:
+                            input.form-control(type="text", id="title", name="title", value=editRecord.title)
+                        div
+                            label(for="artist") Artist: 
+                            input.form-control(type="text", id="artist", name="artist", value=editRecord.artist)
+                        div
+                            label(for="released") Released: 
+                            input.form-control(type="number", id="released", name="released",  value=editRecord.released)
+                        div
+                            label(for="art_src") Cover Art URL: 
+                            input.form-control(type="text", id="art_src", name="art_src", value=editRecord.art_src)
+                        div
+                            label(for="inv") Inventory: 
+                            input.form-control(type="number", id="inv", name="inv", value=editRecord.inv)
+                        div
+                            label(for="price") Price: 
+                            input.form-control(type="number", id="price", name="price", value=editRecord.price)
+                        div
+                            label(for="genre") Genre: 
+                            input.form-control(type="text", id="genre", name="genre", value=editRecord.genre)
+                    button.btn.btn-info(type="submit", value="editRecord") + Edit Record

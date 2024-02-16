@@ -1,0 +1,31 @@
+extends ../common/layout 
+
+block layout-content
+    .container
+        .row
+            .col-sm-12
+                h2.page-title Add New Product
+        .row
+            .col-sm-12 
+                form(method="post", action="/admin/menu/products/add/submit")
+                    .formgroup
+                        div
+                            label(for="name") Product Name:
+                            input.form-control(type="text", id="name", name="name", placeholder="e.g. Funko Pop")
+                        div
+                            label(for="desc") Product Description: 
+                            input.form-control(type="text", id="desc", name="desc", placeholder="e.g. Desprice")
+                        div
+                            label(for="price") Price: 
+                            input.form-control(type="number", id="price", name="price")
+                        div
+                            label(for="category") Category: 
+                            input.form-control(type="text", id="category", name="category")
+                        div
+                            label(for="img_src") Product Image URL: 
+                            input.form-control(type="text", id="img_src", name="img_src")
+
+                        div
+                            label(for="inv") Inventory: 
+                            input.form-control(type="number", id="inv", name="inv")
+                    button.btn.btn-info(type="submit", value="add-product") + Add New Product

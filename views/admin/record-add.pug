@@ -1,0 +1,33 @@
+extends ../common/layout 
+
+block layout-content
+    .container
+        .row
+            .col-sm-12
+                h2.page-title Add New Record
+        .row
+            .col-sm-12 
+                form(method="post", action="/admin/menu/records/add/submit")
+                    .formgroup
+                        div
+                            label(for="title") Title:
+                            input.form-control(type="text", id="title", name="title", placeholder="e.g. Dark Side of the Moon")
+                        div
+                            label(for="artist") Artist: 
+                            input.form-control(type="text", id="artist", name="artist", placeholder="e.g. Britney Spears")
+                        div
+                            label(for="released") Released: 
+                            input.form-control(type="number", id="released", name="released")
+                        div
+                            label(for="art_src") Cover Art URL: 
+                            input.form-control(type="text", id="art_src", name="art_src")
+                        div
+                            label(for="inv") Inventory: 
+                            input.form-control(type="number", id="inv", name="inv")
+                        div
+                            label(for="price") Price: 
+                            input.form-control(type="number", id="price", name="price")
+                        div
+                            label(for="genre") Genre: 
+                            input.form-control(type="text", id="genre", name="genre")
+                    button.btn.btn-info(type="submit", value="add-record") + Add Record

@@ -1,0 +1,19 @@
+extends common/layout 
+
+block layout-content
+    div.container
+        .row.pt-5
+            .col-sm-12
+                h2 #{product.name}
+                h3 
+                    span.badge.bg-info #{product.category}
+        .row
+            .col-sm-6.text-center
+                img(src=product.img_src, width="300px", alt="Cover Art for " + product.name)
+            .col-sm-6
+                p.unit-price $ #{product.price} 
+                p #{product.desc}
+                .unit-buttons.text-center
+                    a.btn.btn-outline-primary Add to Cart
+                
+                

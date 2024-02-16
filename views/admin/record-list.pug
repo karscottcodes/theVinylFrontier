@@ -1,0 +1,39 @@
+extends ../common/layout 
+
+block layout-content
+    div.container
+        div.row
+            div.col
+                h2.page-title Record Inventory Admin
+        div.row
+            div.col
+                a(href="/admin/menu/records/add") + Add New Record
+                table.table
+                    thead
+                    tr
+                        th Title
+                        th Artist
+                        th Released
+                        th Genre
+                        th Cover Art
+                        th Inventory
+                        th Price
+                        th Operations 
+                    tbody 
+                        each record in records
+                            tr
+                                td #{record.title}
+                                td #{record.artist}
+                                td #{record.released}
+                                td #{record.genre}
+                                td 
+                                    img(src=record.art_src, width="100px", alt="Cover Art for " + record.title)
+                                td #{record.inv}
+                                td #{record.price}
+                                td
+                                    form(action="/admin/menu/records/delete")
+                                        input(type="hidden", name="linkId", value=record._id)
+                                        button.btn.btn-danger(type="submit") Delete
+                                    form(action="/admin/menu/records/edit")
+                                        input(type="hidden", name="linkId", value=record._id)
+                                        button.btn.btn-info(type="submit") Edit

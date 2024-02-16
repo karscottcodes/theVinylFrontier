@@ -1,0 +1,22 @@
+extends ../common/layout
+
+block layout-content
+    .container
+        .row
+            .col-sm-12
+                h1.page-title Edit Menu Link
+        .row
+            .col-sm-12
+                form(method="post", action="/admin/menu/nav/edit/submit")
+                    input(type="hidden", name="linkId", value=editLink._id)
+                    div
+                        label(for="weight") Weight:
+                        input.form-control(type="number",min="0", id="weight", name="weight", value=editLink.weight)
+                    div
+                        label(for="path") Path:
+                        input.form-control(type="text", id="path", name="path", value=editLink.path)
+                    div
+                        label(for="name") Name:
+                        input.form-control(type="text", id="link-name", name="name", value=editLink.name)
+                    div 
+                        button(type="submit", value="edit-link") Update Menu Link

@@ -1,0 +1,28 @@
+extends ../common/layout 
+
+block layout-content
+    div.container
+        div.row
+            div.col-sm-12
+                h2.page-title Navigation Menu Admin
+        div.row
+            div.col-sm-12 
+            a(href="/admin/menu/nav/add") + Add Link
+            table.table
+                thead
+                tr
+                    th Link
+                    th Path
+                    th Operations 
+                tbody 
+                    each link in menu 
+                        tr
+                            td #{link.name}
+                            td #{link.path}
+                            td
+                                form(action="/admin/menu/nav/delete")
+                                    input(type="hidden", name="linkId", value=link._id)
+                                    button.btn.btn-danger(type="submit") Delete
+                                form(action="/admin/menu/nav/edit")
+                                    input(type="hidden", name="linkId", value=link._id)
+                                    button.btn.btn-info(type="submit") Edit

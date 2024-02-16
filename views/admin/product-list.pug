@@ -1,0 +1,37 @@
+extends ../common/layout 
+
+block layout-content
+    div.container
+        div.row
+            div.col
+                h2.page-title Product Inventory Admin
+        div.row
+            div.col
+                a(href="/admin/menu/products/add") + Add New Product
+                table.table
+                    thead
+                    tr
+                        th Name
+                        th Description
+                        th Price
+                        th Category
+                        th Image
+                        th Inventory
+                        th Operations 
+                    tbody 
+                        each product in products
+                            tr
+                                td #{product.name}
+                                td #{product.desc}
+                                td #{product.price}
+                                td #{product.category}
+                                td 
+                                    img(src=product.img_src, width="100px", alt="Product Image for " + product.name)
+                                td #{product.inv}
+                                td
+                                    form(action="/admin/menu/products/delete")
+                                        input(type="hidden", name="linkId", value=product._id)
+                                        button.btn.btn-danger(type="submit") Delete
+                                    form(action="/admin/menu/products/edit")
+                                        input(type="hidden", name="linkId", value=product._id)
+                                        button.btn.btn-info(type="submit") Edit

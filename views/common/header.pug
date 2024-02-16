@@ -1,0 +1,10 @@
+header#header
+    nav.navbar
+        a.navbar-brand(href="#")
+            img.d-inline-block.align-top(src="/img/logo.svg", alt="Vinyl Frontier Logo", width="200", height="100")
+        ul.nav
+            each link in menu
+                li.nav-item
+                    a.nav-link(href=link.path) #{link.name}
+            form.form-inline
+                a.btn.btn-sm.btn-outline-primary(href="/admin/menu/", role="button") Admin

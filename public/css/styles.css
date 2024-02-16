@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Figtree:ital,wght@0,300;0,400;0,700;1,400&family=Oxanium&display=swap');
+
+body {
+    font-family: "Figtree", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oxanium', sans-serif;
+}
+
+.jumboHeader {
+    font-family: 'Oxanium', sans-serif;
+    color: silver;
+}
+
+.unit-price {
+    font-family: "Oxanium", sans-serif;
+    font-size: 3em;
+    text-align: center;
+}
+
+.jumbotron-image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

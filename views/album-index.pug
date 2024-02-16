@@ -1,0 +1,21 @@
+extends common/layout 
+
+block layout-content
+    div.container
+        div.row.pt-5
+            h1.page-title Albums | New In Stock!
+    div.container
+        div.row
+            each record in records
+                div.col-lg-4.col-md-6.col-sm-12.pt-5
+                    div.card(style="width: 18rem;")
+                        img.card-img-top(src=record.art_src, alt="Album Cover for " + record.title + " by " + record.artist + ".")
+                        div.card-header #{record.title}
+                        div.card-body
+                            h5.card-title #{record.artist}
+                            h6.card-subtitle #{record.genre}
+                            p.card-text #{record.released}
+                        div.card-footer.text-center
+                            form(action="/albums/view")
+                                input(type="hidden", name="linkId", value=record._id)
+                                button.btn.btn-primary(type="submit") View Details

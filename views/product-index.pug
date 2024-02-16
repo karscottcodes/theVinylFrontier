@@ -1,0 +1,20 @@
+extends common/layout 
+
+block layout-content
+    div.container
+        div.row.pt-5
+            h1.page-title Products | New In Stock!
+    div.container
+        div.row
+            each product in products
+                div.col-lg-4.col-md-6.col-sm-12.pt-5
+                    div.card(style="width: 18rem;")
+                        img.card-img-top(src=product.img_src, alt="Product Image for " + product.name +  ".")
+                        div.card-header #{product.name}
+                        div.card-body
+                            h5.card-title #{product.category}
+                            h6.card-subtitle #{product.price}
+                        div.card-footer.text-center
+                            form(action="/products/view")
+                                input(type="hidden", name="linkId", value=product._id)
+                                button.btn.btn-primary(type="submit") View Details
