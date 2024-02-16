@@ -1,0 +1,44 @@
+[{
+  "_id": {
+    "$oid": "65befdd37d8a7b6d9620b889"
+  },
+  "name": "Connor McDavid - Funko Pop",
+  "desc": "This is a product description.",
+  "price": 19.99,
+  "category": "Collectibles",
+  "img_src": "/img/products/connor_funko.jpg",
+  "inv": 19
+},
+{
+  "_id": {
+    "$oid": "65bf0b52e4860dd3473761fd"
+  },
+  "name": "Michael Jackson - Funko Pop",
+  "desc": "This is a product description.",
+  "price": 19.99,
+  "category": "Collectibles",
+  "img_src": "/img/products/mj_funko.png",
+  "inv": 19
+},
+{
+  "_id": {
+    "$oid": "65bf0b6ce4860dd3473761fe"
+  },
+  "name": "Freddie Mercury - Funko Pop",
+  "desc": "This is a product description.",
+  "price": 19.99,
+  "category": "Collectibles",
+  "img_src": "/img/products/freddie_funko.png",
+  "inv": 19
+},
+{
+  "_id": {
+    "$oid": "65bf0b80e4860dd3473761ff"
+  },
+  "name": "Flavor Flav - Funko Pop",
+  "desc": "This is a product description.",
+  "price": "19.99",
+  "category": "Collectibles",
+  "img_src": "/img/products/flavorflav_funko.png",
+  "inv": "19"
+}]

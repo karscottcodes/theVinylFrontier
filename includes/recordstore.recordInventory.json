@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "65bc3ecbb2a672b74c52987e"
+  },
+  "title": "Bat Out Of Hell",
+  "artist": "Meat Loaf",
+  "released": "1977",
+  "art_src": "/img/albums/batoutofhell_meatloaf.jpg",
+  "inv": "5",
+  "price": "23.99",
+  "genre": "Classic Rock"
+},
+{
+  "_id": {
+    "$oid": "65bc401db2a672b74c529880"
+  },
+  "title": "Greatest Hits (1971-1975)",
+  "artist": "The Eagles",
+  "released": 1988,
+  "art_src": "/img/albums/greatesthits7175_eagles.jpg",
+  "inv": 10,
+  "price": 39.99,
+  "genre": "Classic Rock"
+},
+{
+  "_id": {
+    "$oid": "65bc40cab2a672b74c529881"
+  },
+  "title": "Rumours",
+  "artist": "Fleetwood Mac",
+  "released": 1977,
+  "art_src": "/img/albums/rumours_fleetwoodmac.jpg",
+  "inv": 2,
+  "price": 39.99,
+  "genre": "Classic Rock"
+},
+{
+  "_id": {
+    "$oid": "65bcf10d38affccdec3bf1a1"
+  },
+  "title": "Switcheroo",
+  "artist": "Alexisonfire/Moneen",
+  "released": 2005,
+  "art_src": "/img/albums/switcheroo_aofmoneen.jpg",
+  "inv": 10,
+  "price": 44.99,
+  "genre": "Alternative Rock"
+}]

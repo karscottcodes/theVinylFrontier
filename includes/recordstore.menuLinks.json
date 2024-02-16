@@ -1,0 +1,24 @@
+[{
+  "_id": {
+    "$oid": "65bbfe9a9010469a93381059"
+  },
+  "weight": 0,
+  "path": "/",
+  "name": "Home"
+},
+{
+  "_id": {
+    "$oid": "65bef855290367669b1515da"
+  },
+  "weight": "1",
+  "path": "/albums",
+  "name": "Albums"
+},
+{
+  "_id": {
+    "$oid": "65bf07d82fac46573c88a363"
+  },
+  "weight": "2",
+  "path": "/products",
+  "name": "Products"
+}]
