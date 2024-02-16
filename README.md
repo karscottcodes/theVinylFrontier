@@ -3,3 +3,10 @@ A simple ecommerce-style web application built using Node.js, demonstrating CRUD
 
 Submitted February 16, 2024
 Submitted for HTTP-5222-0NB
+
+**Includes**
+- Create a MongoDB Database named "recordstore"
+- Import Included Collections
+	- recordstore.recordInventory.json
+	- recordstore.productInventory.json
+	- recordstore.menuLinks.json
